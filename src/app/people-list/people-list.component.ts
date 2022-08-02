@@ -14,7 +14,6 @@ export class PeopleListComponent implements OnInit {
 
   constructor()
   {
-    this.people$.pipe(tap(res => this.people = res));
   }
 
   ngOnInit()
