@@ -1,0 +1,16 @@
+<table cellspacing="0" cellpadding="0" *ngIf="people?.length > 0">
+<thead>
+    <tr>
+      <th>First</th>
+      <th>Last</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of people$ | async">
+      <td>{{ person.FirstName }}</td>
+      <td>{{ person.LastName }}</td>
+      <td><button (click)="removeRow(person)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
